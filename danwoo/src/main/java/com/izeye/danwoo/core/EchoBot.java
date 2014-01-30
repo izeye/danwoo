@@ -1,5 +1,8 @@
 package com.izeye.danwoo.core;
 
+import org.springframework.stereotype.Service;
+
+@Service
 public class EchoBot implements Bot {
 
 	@Override
