@@ -37,4 +37,13 @@ public class MessageRepositoryTest {
 		}
 	}
 
+	@Test
+	public void findAllByOrderByTimestampDesc() {
+		Iterable<Message> messages = messageRepository
+				.findAllByOrderByTimestampDesc();
+		for (Message message : messages) {
+			System.out.println(message);
+		}
+	}
+
 }

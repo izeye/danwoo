@@ -13,7 +13,7 @@ public class Message {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long id;
+	private Long id;
 
 	private Date timestamp;
 	@Column(name = "from_")
@@ -37,6 +37,15 @@ public class Message {
 
 	public Message(String from, String to, String value) {
 		this(new Date(), from, to, value, null);
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	@SuppressWarnings("unused")
+	private void setId(Long id) {
+		this.id = id;
 	}
 
 	public Date getTimestamp() {
@@ -81,8 +90,9 @@ public class Message {
 
 	@Override
 	public String toString() {
-		return "Message [timestamp=" + timestamp + ", from=" + from + ", to="
-				+ to + ", value=" + value + ", ipAddress=" + ipAddress + "]";
+		return "Message [id=" + id + ", timestamp=" + timestamp + ", from="
+				+ from + ", to=" + to + ", value=" + value + ", ipAddress="
+				+ ipAddress + "]";
 	}
 
 }

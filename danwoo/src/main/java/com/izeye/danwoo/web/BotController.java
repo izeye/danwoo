@@ -12,27 +12,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.izeye.danwoo.core.bot.DanwooBot;
-import com.izeye.danwoo.core.bot.demo.EchoBot;
-import com.izeye.danwoo.core.bot.demo.ReverseBot;
-import com.izeye.danwoo.core.dao.MessageRepository;
 import com.izeye.danwoo.core.domain.BotType;
 import com.izeye.danwoo.core.domain.Message;
+import com.izeye.danwoo.core.service.BotService;
+import com.izeye.danwoo.core.service.MessageService;
 
 @Controller
 public class BotController {
 
 	@Autowired
-	private EchoBot echoBot;
+	private BotService botService;
 
 	@Autowired
-	private ReverseBot reverseBot;
-
-	@Autowired
-	private DanwooBot danwooBot;
-
-	@Autowired
-	private MessageRepository messageRepository;
+	private MessageService messageService;
 
 	@RequestMapping("/")
 	public String home(Model model) {
@@ -45,38 +37,24 @@ public class BotController {
 	public Message respond(@RequestParam long timestamp,
 			@RequestParam String from, @RequestParam BotType to,
 			@RequestParam String value, @ModelAttribute String ipAddress) {
+		// NOTE:
+		// Can't rely on the client-side system clock.
+		timestamp = System.currentTimeMillis();
+
 		Message request = new Message(new Date(timestamp), from, to.name(),
 				value, ipAddress);
-		messageRepository.save(request);
+		return botService.respond(request);
+	}
 
-		// NOTE:
-		// Give some delay to make the user feel like being in conversation.
-		try {
-			Thread.sleep(1000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
+	@RequestMapping("/messages")
+	public String messages() {
+		return "messages";
+	}
 
-		Message response;
-		switch (to) {
-		case ECHO:
-			response = echoBot.respond(request);
-			break;
-
-		case REVERSE:
-			response = reverseBot.respond(request);
-			break;
-
-		case DANWOO:
-			response = danwooBot.respond(request);
-			break;
-
-		default:
-			throw new IllegalStateException("Unexpected bot type: " + to);
-		}
-		messageRepository.save(response);
-
-		return response;
+	@RequestMapping("/messages.json")
+	@ResponseBody
+	public Iterable<Message> messagesJson() {
+		return messageService.getMessages();
 	}
 
 	@ModelAttribute

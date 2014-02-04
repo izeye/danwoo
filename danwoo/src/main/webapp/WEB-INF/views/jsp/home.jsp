@@ -3,11 +3,8 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Danwoo</title>
+		<title>Chat with Bots</title>
 
-		<link rel="stylesheet" href="<c:url value="/resources/lib/bootstrap/3.1.0/css/bootstrap.min.css" />">
-		
-		<script src="<c:url value="/resources/lib/jquery/2.1.0/jquery-2.1.0.min.js" />"></script>
 		<script src="<c:url value="/resources/lib/momentjs/2.5.1/moment-with-langs.min.js" />"></script>
 	</head>
 	<body>
@@ -16,7 +13,10 @@
 				var time = moment(timestamp);
 				var formattedTime = time.format("YYYY-MM-DD HH:mm:ss");
 				
-				$("#messages").prepend("<tr><td>" + formattedTime + "</td><td>" + who + "</td><td>" + message + "</td></tr>");
+				$("#messages").prepend(
+						"<tr><td>" + formattedTime
+						+ "</td><td>" + who
+						+ "</td><td>" + message + "</td></tr>");
 			}
 			
 			function sendRequest() {
@@ -53,7 +53,7 @@
 						sendRequest();
 					}
 				});
-			})
+			});
 		</script>
 		
 		<label for="to">Bot Type</label>
@@ -79,9 +79,5 @@
 			<tbody id="messages">
 			</tbody>
 		</table>
-		
-		<!--
-		<script src="<c:url value="/resources/lib/bootstrap/3.1.0/js/bootstrap.min.js" />"></script>
-		-->
 	</body>
 </html>
