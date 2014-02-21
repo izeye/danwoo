@@ -23,7 +23,8 @@
 				var timestamp = new Date().getTime();
 				var from = $("#username").val();
 				if (from === '') {
-					from = "Anonymous";
+					alert("Username can't be empty!");
+					return;
 				}
 				var to = $("#to").val();
 				var message = $("#message").val();

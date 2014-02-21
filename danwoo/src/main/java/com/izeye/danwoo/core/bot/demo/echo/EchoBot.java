@@ -1,6 +1,5 @@
-package com.izeye.danwoo.core.bot.demo;
+package com.izeye.danwoo.core.bot.demo.echo;
 
-import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
 
 import com.izeye.danwoo.core.bot.Bot;
@@ -8,12 +7,11 @@ import com.izeye.danwoo.core.domain.Message;
 import com.izeye.danwoo.core.domain.MessageFactory;
 
 @Service
-public class ReverseBot implements Bot {
+public class EchoBot implements Bot {
 
 	@Override
 	public Message respond(Message request) {
-		return MessageFactory.createResponse(request,
-				StringUtils.reverse(request.getValue()));
+		return MessageFactory.createResponse(request, request.getValue());
 	}
 
 }

@@ -1,11 +1,15 @@
 package com.izeye.danwoo.core.service;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.izeye.danwoo.core.bot.DanwooBot;
-import com.izeye.danwoo.core.bot.demo.EchoBot;
-import com.izeye.danwoo.core.bot.demo.ReverseBot;
+import com.izeye.danwoo.core.bot.demo.echo.EchoBot;
+import com.izeye.danwoo.core.bot.demo.eliza.ElizaBot;
+import com.izeye.danwoo.core.bot.demo.reverse.ReverseBot;
 import com.izeye.danwoo.core.dao.MessageRepository;
 import com.izeye.danwoo.core.domain.BotType;
 import com.izeye.danwoo.core.domain.Message;
@@ -19,8 +23,8 @@ public class DefaultBotService implements BotService {
 	@Autowired
 	private ReverseBot reverseBot;
 
-	@Autowired
-	private DanwooBot danwooBot;
+	private Map<String, ElizaBot> elizaBots = new HashMap<String, ElizaBot>();
+	private Map<String, DanwooBot> danwooBots = new HashMap<String, DanwooBot>();
 
 	@Autowired
 	private MessageRepository messageRepository;
@@ -37,6 +41,8 @@ public class DefaultBotService implements BotService {
 			e.printStackTrace();
 		}
 
+		String from = request.getFrom();
+
 		Message response;
 
 		BotType botType = BotType.valueOf(request.getTo());
@@ -49,7 +55,19 @@ public class DefaultBotService implements BotService {
 			response = reverseBot.respond(request);
 			break;
 
+		case ELIZA:
+			ElizaBot elizaBot = elizaBots.get(from);
+			if (elizaBot == null) {
+				elizaBot = new ElizaBot();
+			}
+			response = elizaBot.respond(request);
+			break;
+
 		case DANWOO:
+			DanwooBot danwooBot = danwooBots.get(from);
+			if (danwooBot != null) {
+				danwooBot = new DanwooBot();
+			}
 			response = danwooBot.respond(request);
 			break;
 

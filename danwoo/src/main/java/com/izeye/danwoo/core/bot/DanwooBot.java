@@ -1,16 +1,15 @@
 package com.izeye.danwoo.core.bot;
 
-import org.springframework.stereotype.Service;
-
+import com.izeye.danwoo.core.bot.demo.eliza.ElizaBot;
 import com.izeye.danwoo.core.domain.Message;
-import com.izeye.danwoo.core.domain.MessageFactory;
 
-@Service
 public class DanwooBot implements Bot {
+
+	private ElizaBot elizaBot = new ElizaBot();
 
 	@Override
 	public Message respond(Message request) {
-		return MessageFactory.createResponse(request, "I'm not available yet.");
+		return elizaBot.respond(request);
 	}
 
 }

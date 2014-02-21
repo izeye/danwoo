@@ -2,6 +2,9 @@ package com.izeye.danwoo.core.domain;
 
 public enum BotType {
 
-	ECHO, REVERSE, DANWOO;
+	ELIZA, //
+	DANWOO, //
+	ECHO, //
+	REVERSE;
 
 }

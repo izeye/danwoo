@@ -1,4 +1,4 @@
-package com.izeye.danwoo.core.bot.demo;
+package com.izeye.danwoo.core.bot.demo.echo;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
@@ -11,7 +11,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.izeye.danwoo.core.bot.demo.EchoBot;
 import com.izeye.danwoo.core.domain.BotType;
 import com.izeye.danwoo.core.domain.Message;
 
