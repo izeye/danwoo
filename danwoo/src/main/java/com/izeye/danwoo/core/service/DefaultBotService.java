@@ -6,7 +6,8 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.izeye.danwoo.core.bot.DanwooBot;
+import com.izeye.danwoo.core.bot.alice.AliceBot;
+import com.izeye.danwoo.core.bot.danwoo.DanwooBot;
 import com.izeye.danwoo.core.bot.demo.echo.EchoBot;
 import com.izeye.danwoo.core.bot.demo.eliza.ElizaBot;
 import com.izeye.danwoo.core.bot.demo.reverse.ReverseBot;
@@ -25,6 +26,7 @@ public class DefaultBotService implements BotService {
 
 	private Map<String, ElizaBot> elizaBots = new HashMap<String, ElizaBot>();
 	private Map<String, DanwooBot> danwooBots = new HashMap<String, DanwooBot>();
+	private Map<String, AliceBot> aliceBots = new HashMap<String, AliceBot>();
 
 	@Autowired
 	private MessageRepository messageRepository;
@@ -47,12 +49,20 @@ public class DefaultBotService implements BotService {
 
 		BotType botType = BotType.valueOf(request.getTo());
 		switch (botType) {
-		case ECHO:
-			response = echoBot.respond(request);
+		case ALICE:
+			AliceBot aliceBot = aliceBots.get(from);
+			if (aliceBot == null) {
+				aliceBot = new AliceBot();
+			}
+			response = aliceBot.respond(request);
 			break;
 
-		case REVERSE:
-			response = reverseBot.respond(request);
+		case DANWOO:
+			DanwooBot danwooBot = danwooBots.get(from);
+			if (danwooBot == null) {
+				danwooBot = new DanwooBot();
+			}
+			response = danwooBot.respond(request);
 			break;
 
 		case ELIZA:
@@ -63,12 +73,12 @@ public class DefaultBotService implements BotService {
 			response = elizaBot.respond(request);
 			break;
 
-		case DANWOO:
-			DanwooBot danwooBot = danwooBots.get(from);
-			if (danwooBot != null) {
-				danwooBot = new DanwooBot();
-			}
-			response = danwooBot.respond(request);
+		case ECHO:
+			response = echoBot.respond(request);
+			break;
+
+		case REVERSE:
+			response = reverseBot.respond(request);
 			break;
 
 		default:

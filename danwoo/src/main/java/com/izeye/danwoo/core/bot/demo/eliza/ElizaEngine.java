@@ -9,12 +9,11 @@ import java.util.regex.Pattern;
 
 public class ElizaEngine {
 
-	private ElizaRuleService ruleService;
+	private ElizaRuleService ruleService = new ElizaRuleService();
 
 	private List<String> memory = new ArrayList<String>();
 
 	public void load(File scriptFile) {
-		ruleService = new ElizaRuleService();
 		ruleService.load(scriptFile);
 	}
 

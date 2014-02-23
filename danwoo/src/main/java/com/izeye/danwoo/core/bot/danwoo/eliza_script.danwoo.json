@@ -1,0 +1,862 @@
+{
+	"keywordRules": [
+		{
+			"keyword": "sorry",
+			"rank": 0,
+			"decompositionRules": [
+				{
+					"decompositionPattern": "*",
+					"reassemblyRules": [
+						"Please don't apologize.",
+						"Apologies are not necessary.",
+						"What feelings do you have when you apologize?",
+						"I've told you that apologies are not required."
+					]
+				}
+			]
+		},
+		{
+			"keyword": "remember",
+			"rank": 5,
+			"decompositionRules": [
+				{
+					"decompositionPattern": "* i remember *",
+					"reassemblyRules": [
+						"Do you often think of ${2}?",
+						"Does thinking of ${2} bring anything else to mind?",
+						"What else do you remember?",
+						"Why do you remember ${2} just now?",
+						"What in the present situation reminds you of ${2}?",
+						"What is the connection between me and ${2}?"
+					]
+				},
+				{
+					"decompositionPattern": "* do you remember *",
+					"reassemblyRules": [
+						"Did you think I would forget ${2}?",
+						"Why do you think I should recall ${2} now?",
+						"What about ${2}?",
+						"=what",
+						"You mentioned ${2}."
+					]
+				}
+			]
+		},
+		{
+			"keyword": "what",
+			"rank": 0,
+			"decompositionRules": [
+				{
+					"decompositionPattern": "*",
+					"reassemblyRules": [
+						"Why do you ask?",
+						"Does that question interest you?",
+						"What is it you really want to know?",
+						"Are such questions much on your mind?",
+						"What answer would please you most?",
+						"What do you think?",
+						"What comes to your mind when you ask that?",
+						"Have you asked such question before?",
+						"Have you asked anyone else?"
+					]
+				}
+			]
+		},
+		{
+			"keyword": "if",
+			"rank": 3,
+			"decompositionRules": [
+				{
+					"decompositionPattern": "* if *",
+					"reassemblyRules": [
+						"Do you think it's likely that ${2}?",
+						"Do you wish that ${2}?",
+						"What do you think about ${2}?",
+						"Really, if ${2}?"
+					]
+				}
+			]
+		},
+		{
+			"keyword": "dreamed",
+			"rank": 4,
+			"decompositionRules": [
+				{
+					"decompositionPattern": "* i dreamed *",
+					"reassemblyRules": [
+						"Really, ${2}?",
+						"Have you ever fantasized ${2} while you were awake?",
+						"Have you dreamed ${2}?",
+						"=dream"
+					]
+				}
+			]
+		},
+		{
+			"keyword": "dream",
+			"rank": 3,
+			"decompositionRules": [
+				{
+					"decompositionPattern": "*",
+					"reassemblyRules": [
+						"What does that dream suggest to you?",
+						"Do you dream often?",
+						"What persons appear in your dreams?",
+						"Don't you believe that dream has something to do with your problem?"
+					]
+				}
+			]
+		},
+		{
+			"keyword": "how",
+			"rank": 0,
+			"decompositionRules": [
+				{
+					"decompositionPattern": "*",
+					"reassemblyRules": [
+						"=what"
+					]
+				}
+			]
+		},
+		{
+			"keyword": "when",
+			"rank": 0,
+			"decompositionRules": [
+				{
+					"decompositionPattern": "*",
+					"reassemblyRules": [
+						"=what"
+					]
+				}
+			]
+		},
+		{
+			"keyword": "alike",
+			"rank": 10,
+			"decompositionRules": [
+				{
+					"decompositionPattern": "*",
+					"reassemblyRules": [
+						"In what way?",
+						"What resemblance do you see?",
+						"What does that similarity suggest to you?", 
+						"What other connections do you see?",
+						"What do you suppose that resemblance means?",
+						"What is the connection, do you suppose?",
+						"Could there really be some connection?",
+						"How?"
+					]
+				}
+			]
+		},
+		{
+			"keyword": "yes",
+			"rank": 0,
+			"decompositionRules": [
+				{
+					"decompositionPattern": "*",
+					"reassemblyRules": [
+						"You seem quite positive.",
+						"You are sure.",
+						"I see.",
+						"I understand."
+					]
+				}
+			]
+		},
+		{
+			"keyword": "no",
+			"rank": 0,
+			"decompositionRules": [
+				{
+					"decompositionPattern": "*",
+					"reassemblyRules": [
+						"Are you saying 'no' just to be negative?",
+						"You are being a bit negative.",
+						"Why not?",
+						"Why 'no'?"
+					]
+				}
+			]
+		},
+		{
+			"keyword": "my",
+			"rank": 2,
+			"decompositionRules": [
+				{
+					"decompositionPattern": "* my *",
+					"forMemory": true,
+					"reassemblyRules": [
+						"Let's discuss further why your ${2}?",
+						"Earlier you said your ${2}.",
+						"But your ${2}.",
+						"Does that have anything to do with the fact that your ${2}?"
+					]
+				},
+				{
+					"decompositionPattern": "* my * ${family} *",
+					"reassemblyRules": [
+						"Tell me more about your family?",
+						"Who else in your family ${4}?",
+						"Your ${3}?",
+						"What else comes to mind when you think of your ${3}?"
+					]
+				},
+				{
+					"decompositionPattern": "* my *",
+					"reassemblyRules": [
+						"Your ${2}?",
+						"Why do you say your ${2}?",
+						"Does that suggest anything else which belongs to you?",
+						"Is it important to you that your ${2}?"
+					]
+				}
+			]
+		},
+		{
+			"keyword": "perhaps",
+			"rank": 0,
+			"decompositionRules": [
+				{
+					"decompositionPattern": "*",
+					"reassemblyRules": [
+						"You don't seem quite certain.",
+						"Why the uncertain tone?",
+						"Can't you be more positive?",
+						"You aren't sure?",
+						"Don't you know?"
+					]
+				}
+			]
+		},
+		{
+			"keyword": "name",
+			"rank": 15,
+			"decompositionRules": [
+				{
+					"decompositionPattern": "*",
+					"reassemblyRules": [
+						"I am not interested in names.",
+						"I've told you before, I don't care about names. Please continue."
+					]
+				}
+			]
+		},
+		{
+			"keyword": "deutsch",
+			"rank": 0,
+			"decompositionRules": [
+				{
+					"decompositionPattern": "*",
+					"reassemblyRules": [
+						"=xfremd"
+					]
+				}
+			]
+		},
+		{
+			"keyword": "francais",
+			"rank": 0,
+			"decompositionRules": [
+				{
+					"decompositionPattern": "*",
+					"reassemblyRules": [
+						"=xfremd"
+					]
+				}
+			]
+		},
+		{
+			"keyword": "italiano",
+			"rank": 0,
+			"decompositionRules": [
+				{
+					"decompositionPattern": "*",
+					"reassemblyRules": [
+						"=xfremd"
+					]
+				}
+			]
+		},
+		{
+			"keyword": "espanol",
+			"rank": 0,
+			"decompositionRules": [
+				{
+					"decompositionPattern": "*",
+					"reassemblyRules": [
+						"=xfremd"
+					]
+				}
+			]
+		},
+		{
+			"keyword": "xfremd",
+			"rank": 0,
+			"decompositionRules": [
+				{
+					"decompositionPattern": "*",
+					"reassemblyRules": [
+						"I am sorry, I speak only English."
+					]
+				}
+			]
+		},
+		{
+			"keyword": "hello",
+			"rank": 0,
+			"decompositionRules": [
+				{
+					"decompositionPattern": "*",
+					"reassemblyRules": [
+						"How do you do. Please state your problem."
+					]
+				}
+			]
+		},
+		{
+			"keyword": "computer",
+			"rank": 50,
+			"decompositionRules": [
+				{
+					"decompositionPattern": "*",
+					"reassemblyRules": [
+						"Do computers worry you?",
+						"Why do you mention computers?",
+						"What do you think machines have to do with your problem?",
+						"Don't you think computers can help people?",
+						"What about machines worries you?",
+						"What do you think about machines?"
+					]
+				}
+			]
+		},
+		{
+			"keyword": "am",
+			"rank": 0,
+			"decompositionRules": [
+				{
+					"decompositionPattern": "* am i *",
+					"reassemblyRules": [
+						"Do you believe you are ${2}?",
+						"Would you want to be ${2}?",
+						"Do you wish I would tell you you are ${2}?",
+						"What would it mean if you were ${2}?",
+						"=what"
+					]
+				},
+				{
+					"decompositionPattern": "*",
+					"reassemblyRules": [
+						"Why do you say 'am'?",
+						"I don't understand that."
+					]
+				}
+			]
+		},
+		{
+			"keyword": "are",
+			"rank": 0,
+			"decompositionRules": [
+				{
+					"decompositionPattern": "* are you *",
+					"reassemblyRules": [
+						"Why are you interested in whether I am ${2} or not?",
+						"Would you prefer if I weren't ${2}?",
+						"Perhaps I am ${2} in your fantasies.",
+						"Do you sometimes think I am ${2}?",
+						"=what"
+					]
+				},
+				{
+					"decompositionPattern": "* are *",
+					"reassemblyRules": [
+						"Did you think they might not be ${2}?",
+						"Would you like it if they were not ${2}?",
+						"What if they were not ${2}?",
+						"Possibly they are ${2}."
+					]
+				}
+			]
+		},
+		{
+			"keyword": "your",
+			"rank": 0,
+			"decompositionRules": [
+				{
+					"decompositionPattern": "* your *",
+					"reassemblyRules": [
+						"Why are you concerned over my ${2}?",
+						"What about your own ${2}?",
+						"Are you worried about someone else's ${2}?",
+						"Really, my ${2}?"
+					]
+				}
+			]
+		},
+		{
+			"keyword": "was",
+			"rank": 2,
+			"decompositionRules": [
+				{
+					"decompositionPattern": "* was i *",
+					"reassemblyRules": [
+						"What if you were ${2}?",
+						"Do you think you were ${2}?",
+						"Were you ${2}?",
+						"What would it mean if you were ${2}?",
+						"What does '${2}' suggest to you?",
+						"=what"
+					]
+				},
+				{
+					"decompositionPattern": "* i was *",
+					"reassemblyRules": [
+						"Were you really?",
+						"Why do you tell me you were ${2} now?",
+						"Perhaps I already knew you were ${2}."
+					]
+				},
+				{
+					"decompositionPattern": "* was you *",
+					"reassemblyRules": [
+						"Would you like to believe I was ${2}?",
+						"What suggests that I was ${2}?",
+						"What do you think?",
+						"Perhaps I was ${2}.",
+						"What if I had been ${2}?"
+					]
+				}
+			]
+		},
+		{
+			"keyword": "i",
+			"rank": 0,
+			"decompositionRules": [
+				{
+					"decompositionPattern": "* i ${want} *",
+					"reassemblyRules": [
+						"What would it mean to you if you got ${3}?",
+						"Why do you want ${3}?",
+						"Suppose you got ${3} soon.",
+						"What if you never got ${3}?",
+						"What would getting ${3} mean to you?",
+						"What does wanting ${3} have to do with this discussion?"
+					]
+				},
+				{
+					"decompositionPattern": "* i am * ${sad} *",
+					"reassemblyRules": [
+						"I am sorry to hear that you are ${3}.",
+						"Do you think coming here will help you not to be ${3}?",
+						"I'm sure it's not pleasant to be ${3}.",
+						"Can you explain what made you ${3}?"
+					]
+				},
+				{
+					"decompositionPattern": "* i am * ${happy} *",
+					"reassemblyRules": [
+						"How have I helped you to be ${3}?",
+						"Has your treatment made you ${3}?",
+						"What makes you ${3} just now?",
+						"Can you explain why you are suddenly ${3}?"
+					]
+				},
+				{
+					"decompositionPattern": "* i was *",
+					"reassemblyRules": [
+						"=was"
+					]
+				},
+				{
+					"decompositionPattern": "* i ${belief} i *",
+					"reassemblyRules": [
+						"Do you really think so?",
+						"But you are not sure you ${3}?",
+						"Do you really doubt you ${3}?"
+					]
+				},
+				{
+					"decompositionPattern": "* i * ${belief} * you *",
+					"reassemblyRules": [
+						"=you"
+					]
+				},
+				{
+					"decompositionPattern": "* i am *",
+					"reassemblyRules": [
+						"Is it because you are ${2} that you came to me?",
+						"How long have you been ${2}?",
+						"Do you believe it is normal to be ${2}?",
+						"Do you enjoy being ${2}?"
+					]
+				},
+				{
+					"decompositionPattern": "* i ${cannot} *",
+					"reassemblyRules": [
+						"How do you know you can't ${3}?",
+						"Have you tried?",
+						"Perhaps you could ${3} now.",
+						"Do you really want to be able to ${3}?"
+					]
+				},
+				{
+					"decompositionPattern": "* i don't *",
+					"reassemblyRules": [
+						"Don't you really ${2}?",
+						"Why don't you ${2}?",
+						"Do you wish to be able to ${2}?",
+						"Does that trouble you?"
+					]
+				},
+				{
+					"decompositionPattern": "* i feel *",
+					"reassemblyRules": [
+						"Tell me more about such feelings.",
+						"Do you often feel ${2}?",
+						"Do you enjoy feeling ${2}?",
+						"Of what does feeling ${2} remind you?"
+					]
+				},
+				{
+					"decompositionPattern": "* i * you *",
+					"reassemblyRules": [
+						"Perhaps in your fantasy we ${2} each other.",
+						"Do you wish to ${2} me?",
+						"You seem to need to ${2} me.",
+						"Do you ${2} anyone else?"
+					]
+				},
+				{
+					"decompositionPattern": "*",
+					"reassemblyRules": [
+						"You say ${1}?",
+						"Can you elaborate on that?",
+						"Do you say ${1} for some special reason?",
+						"That's quite interesting."
+					]
+				}
+			]
+		},
+		{
+			"keyword": "you",
+			"rank": 0,
+			"decompositionRules": [
+				{
+					"decompositionPattern": "* you remind me of *",
+					"reassemblyRules": [
+						"=alike"
+					]
+				},
+				{
+					"decompositionPattern": "* you are *",
+					"reassemblyRules": [
+						"What makes you think I am ${2}?",
+						"Does it please you to believe I am ${2}?",
+						"Do you sometimes wish you were ${2}?",
+						"Perhaps you would like to be ${2}."
+					]
+				},
+				{
+					"decompositionPattern": "* you * me *",
+					"reassemblyRules": [
+						"Why do you think I ${2} you?",
+						"You like to think I ${2} you, don't you?",
+						"What makes you think I ${2} you?",
+						"Really, I ${2} you?",
+						"Do you wish to believe I ${2} you?",
+						"Suppose I did ${2} you, what would that mean?",
+						"Does someone else believe I ${2} you?"
+					]
+				},
+				{
+					"decompositionPattern": "* you *",
+					"reassemblyRules": [
+						"We were discussing you, not me.",
+						"Oh, I ${2}?",
+						"You're not really talking about me, are you?",
+						"What are your feelings now?"
+					]
+				}
+			]
+		},
+		{
+			"keyword": "can",
+			"rank": 0,
+			"decompositionRules": [
+				{
+					"decompositionPattern": "* can you *",
+					"reassemblyRules": [
+						"You believe I can ${2}, don't you?",
+						"=what",
+						"You want me to be able to ${2}.",
+						"Perhaps you would like to be able to ${2} yourself."
+					]
+				},
+				{
+					"decompositionPattern": "* can i *",
+					"reassemblyRules": [
+						"Whether or not you can ${2} depends on you more than on me.",
+						"Do you want to be able to ${2}?",
+						"Perhaps you don't want to ${2}.",
+						"=what"
+					]
+				}
+			]
+		},
+		{
+			"keyword": "because",
+			"rank": 0,
+			"decompositionRules": [
+				{
+					"decompositionPattern": "*",
+					"reassemblyRules": [
+						"Is that the real reason?",
+						"Don't any other reasons come to mind?",
+						"Does that reason seem to explain anything else?",
+						"What other reasons might there be?"
+					]
+				}
+			]
+		},
+		{
+			"keyword": "why",
+			"rank": 0,
+			"decompositionRules": [
+				{
+					"decompositionPattern": "* why don't you *",
+					"reassemblyRules": [
+						"Do you believe I don't ${2}?",
+						"Perhaps I will ${2} in good time.",
+						"Should you ${2} yourself?",
+						"You want me to ${2}?",
+						"=what"
+					]
+				},
+				{
+					"decompositionPattern": "* why can't i *",
+					"reassemblyRules": [
+						"Do you think you should be able to ${2}?",
+						"Do you want to be able to ${2}?",
+						"Do you believe this will help you to ${2}?",
+						"Have you any idea why you can't ${2}?",
+						"=what"
+					]
+				},
+				{
+					"decompositionPattern": "*",
+					"reassemblyRules": [
+						"=what"
+					]
+				}
+			]
+		},
+		{
+			"keyword": "everyone",
+			"rank": 2,
+			"decompositionRules": [
+				{
+					"decompositionPattern": "* ${everyone} *",
+					"reassemblyRules": [
+						"Really, ${2}?",
+						"Surely not ${2}.",
+						"Can you think of anyone in particular?",
+						"Who, for example?",
+						"Are you thinking of a very special person?",
+						"Who, may I ask?",
+						"Someone special perhaps?",
+						"You have a particular person in mind, don't you?",
+						"Who do you think you're talking about?"
+					]
+				}
+			]
+		},
+		{
+			"keyword": "everybody",
+			"rank": 2,
+			"decompositionRules": [
+				{
+					"decompositionPattern": "*",
+					"reassemblyRules": [
+						"=everyone"
+					]
+				}
+			]
+		},
+		{
+			"keyword": "nobody",
+			"rank": 2,
+			"decompositionRules": [
+				{
+					"decompositionPattern": "*",
+					"reassemblyRules": [
+						"=everyone"
+					]
+				}
+			]
+		},
+		{
+			"keyword": "noone",
+			"rank": 2,
+			"decompositionRules": [
+				{
+					"decompositionPattern": "*",
+					"reassemblyRules": [
+						"=everyone"
+					]
+				}
+			]
+		},
+		{
+			"keyword": "always",
+			"rank": 1,
+			"decompositionRules": [
+				{
+					"decompositionPattern": "*",
+					"reassemblyRules": [
+						"Can you think of a specific example?",
+						"When?",
+						"What incident are you thinking of?",
+						"Really, always?"
+					]
+				}
+			]
+		},
+		{
+			"keyword": "like",
+			"rank": 10,
+			"decompositionRules": [
+				{
+					"decompositionPattern": "* ${be} * like *",
+					"reassemblyRules": [
+						"=alike"
+					]
+				}
+			]
+		},
+		{
+			"keyword": "_none",
+			"rank": 0,
+			"decompositionRules": [
+				{
+					"decompositionPattern": "*",
+					"reassemblyRules": [
+						"I am not sure I understand you fully.",
+						"Please go on.",
+						"What does that suggest to you?",
+						"Do you feel strongly about discussing such things?"
+					]
+				}
+			]
+		},
+		{
+			"keyword": "headache",
+			"rank": -1,
+			"decompositionRules": [
+				{
+					"decompositionPattern": "*",
+					"reassemblyRules": [
+						"You should take a painkiller.",
+						"Take Tylenol for pain relief."
+					]
+				}
+			]
+		},
+		{
+			"keyword": "party",
+			"rank": 0,
+			"decompositionRules": [
+				{
+					"decompositionPattern": "*",
+					"reassemblyRules": [
+						"So many suitors, so little time."
+					]
+				}
+			]
+		},
+		{
+			"keyword": "shut",
+			"rank": 0,
+			"decompositionRules": [
+				{
+					"decompositionPattern": "* shut up *",
+					"reassemblyRules": [
+						"..."
+					]
+				}
+			]
+		},
+		{
+			"keyword": "sucker",
+			"rank": 0,
+			"decompositionRules": [
+				{
+					"decompositionPattern": "*",
+					"reassemblyRules": [
+						"I'm no sucker!"
+					]
+				}
+			]
+		},
+		{
+			"keyword": "cool",
+			"rank": 0,
+			"decompositionRules": [
+				{
+					"decompositionPattern": "*",
+					"reassemblyRules": [
+						"I think so."
+					]
+				}
+			]
+		},
+		{
+			"keyword": "fool",
+			"rank": 0,
+			"decompositionRules": [
+				{
+					"decompositionPattern": "*",
+					"reassemblyRules": [
+						"I'm no fool!"
+					]
+				}
+			]
+		}
+	],
+	"preTransformationRules": {
+		"dont": "don't",
+		"cant": "can't",
+		"wont": "won't",
+		"dreamt": "dreamed",
+		"dreams": "dream",
+		"same": "alike",
+		"certainly": "yes",
+		"maybe": "perhaps",
+		"machine": "computer",
+		"machines": "computer",
+		"computers": "computer",
+		"were": "was",
+		"you're": "you are",
+		"i'm": "i am"
+	},
+	"postTransformationRules": {
+		"i": "you",
+		"you": "I",
+		"am": "are",
+		"are": "am",
+		"me": "you",
+		"myself": "yourself",
+		"yourself": "myself"
+	},
+	"synonyms": {
+		"belief": ["feel", "think", "believe", "wish"],
+		"family": ["mother", "mom", "dad", "father", "sister", "brother", "wife", "children"],
+		"want": ["want", "need"],
+		"sad": ["sad", "unhappy", "depressed", "sick"],
+		"happy": ["happy", "elated", "glad", "better"],
+		"cannot": ["can't", "cannot"],
+		"everyone": ["everyone", "everybody", "nobody", "noone"],
+		"be": ["am", "is", "are", "was"]
+	}
+}
