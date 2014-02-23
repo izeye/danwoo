@@ -16,7 +16,7 @@ public class DanwooBotTest {
 		Date timestamp = new Date();
 		String from = "Anonymous";
 		String to = BotType.DANWOO.name();
-		String value = "hello";
+		String value = "Hello.";
 		String ipAddress = "1.2.3.4";
 		Message request = new Message(timestamp, from, to, value, ipAddress);
 
@@ -60,6 +60,20 @@ public class DanwooBotTest {
 		System.out.println(response.getValue());
 
 		value = "Fool?";
+		request = new Message(timestamp, from, to, value, ipAddress);
+
+		response = danwooBot.respond(request);
+		System.out.println(request.getValue());
+		System.out.println(response.getValue());
+
+		value = "당연하지.";
+		request = new Message(timestamp, from, to, value, ipAddress);
+
+		response = danwooBot.respond(request);
+		System.out.println(request.getValue());
+		System.out.println(response.getValue());
+
+		value = "1+1";
 		request = new Message(timestamp, from, to, value, ipAddress);
 
 		response = danwooBot.respond(request);
