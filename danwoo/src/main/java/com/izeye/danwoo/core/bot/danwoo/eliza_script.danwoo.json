@@ -112,6 +112,12 @@
 			"rank": 0,
 			"decompositionRules": [
 				{
+					"decompositionPattern": "* how are you *",
+					"reassemblyRules": [
+						"I am fine. How are you?"
+					]
+				},
+				{
 					"decompositionPattern": "*",
 					"reassemblyRules": [
 						"=what"
@@ -819,6 +825,18 @@
 					"decompositionPattern": "*",
 					"reassemblyRules": [
 						"I'm no fool!"
+					]
+				}
+			]
+		},
+		{
+			"keyword": "work",
+			"rank": 0,
+			"decompositionRules": [
+				{
+					"decompositionPattern": "* work hard *",
+					"reassemblyRules": [
+						"You'd better take care of yourself."
 					]
 				}
 			]

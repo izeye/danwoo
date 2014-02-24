@@ -32,7 +32,7 @@ public class DanwooEngine {
 		}
 	}
 
-	private static final String DEFAULT_RESPONSE_FOR_KOREAN = "I don't know Korean. Please speak in English.";
+	private static final String DEFAULT_RESPONSE_FOR_KOREAN = "I haven't learned Korean yet. Please speak in English.";
 
 	public String respond(String input) {
 		// Handle language specific.
