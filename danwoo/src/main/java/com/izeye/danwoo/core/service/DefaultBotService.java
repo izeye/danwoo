@@ -53,6 +53,7 @@ public class DefaultBotService implements BotService {
 			AliceBot aliceBot = aliceBots.get(from);
 			if (aliceBot == null) {
 				aliceBot = new AliceBot();
+				aliceBots.put(from, aliceBot);
 			}
 			response = aliceBot.respond(request);
 			break;
@@ -61,6 +62,7 @@ public class DefaultBotService implements BotService {
 			DanwooBot danwooBot = danwooBots.get(from);
 			if (danwooBot == null) {
 				danwooBot = new DanwooBot();
+				danwooBots.put(from, danwooBot);
 			}
 			response = danwooBot.respond(request);
 			break;
@@ -69,6 +71,7 @@ public class DefaultBotService implements BotService {
 			ElizaBot elizaBot = elizaBots.get(from);
 			if (elizaBot == null) {
 				elizaBot = new ElizaBot();
+				elizaBots.put(from, elizaBot);
 			}
 			response = elizaBot.respond(request);
 			break;

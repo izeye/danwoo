@@ -66,7 +66,7 @@
 		<label for="username">Username</label>
 		<input id="username" type="text">
 		<label for="message">Message</label>
-		<input id="message" type="text" autofocus="autofocus">
+		<input id="message" type="text" autofocus="autofocus" lang="en" x-webkit-speech>
 		<input type="button" value="Send" onclick="sendRequest();">
 		
 		<table class="table table-striped table-hover table-condensed">

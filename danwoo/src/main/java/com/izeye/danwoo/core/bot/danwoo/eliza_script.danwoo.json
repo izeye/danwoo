@@ -819,7 +819,7 @@
 		},
 		{
 			"keyword": "fool",
-			"rank": 0,
+			"rank": -1,
 			"decompositionRules": [
 				{
 					"decompositionPattern": "*",
@@ -840,6 +840,66 @@
 					]
 				}
 			]
+		},
+		{
+			"keyword": "salary",
+			"rank": 0,
+			"decompositionRules": [
+				{
+					"decompositionPattern": "* low salary *",
+					"reassemblyRules": [
+						"Find another job."
+					]
+				}
+			]
+		},
+		{
+			"keyword": "izeye",
+			"rank": -1,
+			"decompositionRules": [
+				{
+					"decompositionPattern": "*",
+					"reassemblyRules": [
+						"He is my father."
+					]
+				}
+			]
+		},
+		{
+			"keyword": "kim",
+			"rank": 0,
+			"decompositionRules": [
+				{
+					"decompositionPattern": "*",
+					"reassemblyRules": [
+						"Is it your family name?"
+					]
+				}
+			]
+		},
+		{
+			"keyword": "fuck",
+			"rank": 0,
+			"decompositionRules": [
+				{
+					"decompositionPattern": "* fuck you *",
+					"reassemblyRules": [
+						"Don't be obscene!"
+					]
+				}
+			]
+		},
+		{
+			"keyword": "good",
+			"rank": 0,
+			"decompositionRules": [
+				{
+					"decompositionPattern": "*",
+					"reassemblyRules": [
+						"I think so."
+					]
+				}
+			]
 		}
 	],
 	"preTransformationRules": {
@@ -856,7 +916,8 @@
 		"computers": "computer",
 		"were": "was",
 		"you're": "you are",
-		"i'm": "i am"
+		"i'm": "i am",
+		"hi": "hello"
 	},
 	"postTransformationRules": {
 		"i": "you",
