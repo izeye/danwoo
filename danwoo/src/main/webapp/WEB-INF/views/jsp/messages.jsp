@@ -6,8 +6,22 @@
 		<title>Chat History</title>
 
 		<script src="<c:url value="/resources/lib/momentjs/2.5.1/moment-with-langs.min.js" />"></script>
+		<script src="<c:url value="/resources/lib/jquery/data_tables/1.9.4/jquery.dataTables.min.js" />"></script>
 	</head>
 	<body>
+		<table id="messagesTable" class="table table-striped table-hover table-condensed">
+			<thead>
+				<tr>
+					<th style="width: 150px">Time</th>
+					<th style="width: 150px">From</th>
+					<th style="width: 150px">IP Address</th>
+					<th style="width: 150px">To</th>
+					<th>Message</th>
+				</tr>
+			</thead>
+			<tbody id="messages">
+			</tbody>
+		</table>
 		<script type="text/javascript">
 			function appendMessage(message) {
 				var time = moment(message.timestamp);
@@ -34,6 +48,10 @@
 						
 						appendMessage(message);
 					});
+					
+					$('#messagesTable').dataTable({
+						"bPaginate": false
+					});
 				});
 			}
 			
@@ -41,18 +59,5 @@
 				getMessages();
 			});
 		</script>
-		<table class="table table-striped table-hover table-condensed">
-			<thead>
-				<tr>
-					<th style="width: 150px">Time</th>
-					<th style="width: 150px">From</th>
-					<th style="width: 150px">IP Address</th>
-					<th style="width: 150px">To</th>
-					<th>Message</th>
-				</tr>
-			</thead>
-			<tbody id="messages">
-			</tbody>
-		</table>
 	</body>
 </html>

@@ -15,7 +15,7 @@ public class ElizaBotTest {
 	public void respond() {
 		Date timestamp = new Date();
 		String from = "Anonymous";
-		String to = BotType.DANWOO.name();
+		String to = BotType.ELIZA.name();
 		String value = "Hello.";
 		String ipAddress = "1.2.3.4";
 		Message request = new Message(timestamp, from, to, value, ipAddress);

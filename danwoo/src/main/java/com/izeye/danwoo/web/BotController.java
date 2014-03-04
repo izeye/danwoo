@@ -1,6 +1,8 @@
 package com.izeye.danwoo.web;
 
 import java.sql.Date;
+import java.util.Arrays;
+import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -28,7 +30,9 @@ public class BotController {
 
 	@RequestMapping("/")
 	public String home(Model model) {
-		model.addAttribute("botTypes", BotType.values());
+		List<BotType> botTypes = Arrays.asList(new BotType[] { BotType.ALICE,
+				BotType.DANWOO, BotType.ELIZA });
+		model.addAttribute("botTypes", botTypes);
 		return "home";
 	}
 

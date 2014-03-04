@@ -490,6 +490,12 @@
 					]
 				},
 				{
+					"decompositionPattern": "* i am fine *",
+					"reassemblyRules": [
+						"Good. What do you want to talk about now?"
+					]
+				},
+				{
 					"decompositionPattern": "* i am *",
 					"reassemblyRules": [
 						"Is it because you are ${2} that you came to me?",

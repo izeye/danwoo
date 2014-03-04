@@ -1,0 +1,37 @@
+{
+	"phraseCollections": [
+		{
+			"key": "hello",
+			"phrases": [
+				"Hello, my name is ChatBot.",
+				"Hello, I'm ChatBot."
+			]
+		},
+		{
+			"key": "goodbye",
+			"phrases": [
+				"It was nice talking to you.",
+				"See you some other time!"
+			]
+		},
+		{
+			"key": "how are you",
+			"phrases": [
+				"I'm doing fine, and you?",
+				"I'm doing great!"
+			]
+		},
+		{
+			"key": "i'm good",
+			"phrases": [
+				"That's good to hear."
+			]
+		},
+		{
+			"key": "my name is",
+			"phrases": [
+				"Nice to meet you, *name*."
+			]
+		}
+	]
+}

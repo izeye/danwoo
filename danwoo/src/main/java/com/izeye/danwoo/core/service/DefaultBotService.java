@@ -38,7 +38,7 @@ public class DefaultBotService implements BotService {
 		// NOTE:
 		// Give some delay to make the user feel like being in conversation.
 		try {
-			Thread.sleep(1000);
+			Thread.sleep(500);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}

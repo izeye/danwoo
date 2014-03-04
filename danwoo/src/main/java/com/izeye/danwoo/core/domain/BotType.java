@@ -5,6 +5,7 @@ public enum BotType {
 	ALICE, //
 	DANWOO, //
 	ELIZA, //
+	GREGORY, //
 	ECHO, //
 	REVERSE;
 
