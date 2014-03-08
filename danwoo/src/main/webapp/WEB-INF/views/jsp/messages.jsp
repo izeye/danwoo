@@ -50,7 +50,8 @@
 					});
 					
 					$('#messagesTable').dataTable({
-						"bPaginate": false
+						"bPaginate": false,
+						"bSort": false
 					});
 				});
 			}
