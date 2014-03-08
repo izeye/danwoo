@@ -9,6 +9,7 @@
 	<configs>
 		<config>src/main/webapp/WEB-INF/spring/danwoo/servlet-context.xml</config>
 		<config>src/main/resources/spring/applicationContext.xml</config>
+		<config>src/main/resources/spring/applicationContext-security.xml</config>
 	</configs>
 	<configSets>
 	</configSets>

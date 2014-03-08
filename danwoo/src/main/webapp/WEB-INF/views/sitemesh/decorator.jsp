@@ -39,6 +39,8 @@
 			<sitemesh:write property="body" />
 		</div>
 		
+		<p><a href="j_spring_security_logout">Logout</a></p>
+		
 		<script src="<c:url value="/resources/lib/bootstrap/3.1.0/js/bootstrap.min.js" />"></script>
 	</body>
 </html>
