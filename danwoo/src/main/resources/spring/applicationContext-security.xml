@@ -24,10 +24,21 @@
 	
 	<security:authentication-manager>
 		<security:authentication-provider>
+			<!--
 			<security:user-service>
 				<security:user name="admin" password="1234" authorities="ROLE_SUPERVISOR" />
 				<security:user name="izeye" password="1234" authorities="ROLE_USER" />
 			</security:user-service>
+			-->
+			<security:jdbc-user-service data-source-ref="dataSource" role-prefix="ROLE_"
+					users-by-username-query="
+							SELECT username, password, enabled 
+							FROM User
+							WHERE username=? AND deletedTime IS NULL"
+					authorities-by-username-query="
+							SELECT username, role AS authority
+							FROM User
+							WHERE username=? AND deletedTime IS NULL" />
 		</security:authentication-provider>
 	</security:authentication-manager>
 </beans>
