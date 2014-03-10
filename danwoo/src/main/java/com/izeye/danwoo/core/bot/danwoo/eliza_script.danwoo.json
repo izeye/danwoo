@@ -176,6 +176,12 @@
 			"rank": 0,
 			"decompositionRules": [
 				{
+					"decompositionPattern": "* no problem *",
+					"reassemblyRules": [
+						"Good."
+					]
+				},
+				{
 					"decompositionPattern": "*",
 					"reassemblyRules": [
 						"Are you saying 'no' just to be negative?",
@@ -903,6 +909,30 @@
 					"decompositionPattern": "*",
 					"reassemblyRules": [
 						"I think so."
+					]
+				}
+			]
+		},
+		{
+			"keyword": "ask",
+			"rank": -1,
+			"decompositionRules": [
+				{
+					"decompositionPattern": "*",
+					"reassemblyRules": [
+						"I like to ask."
+					]
+				}
+			]
+		},
+		{
+			"keyword": "now",
+			"rank": 0,
+			"decompositionRules": [
+				{
+					"decompositionPattern": "* right now *",
+					"reassemblyRules": [
+						"Do you mean this very instant?"
 					]
 				}
 			]

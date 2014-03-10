@@ -9,7 +9,7 @@
 	</head>
 	<body>
 		<label for="to">Bot Type</label>
-		<select id="to">
+		<select id="to" onchange="drawBot()">
 			<c:forEach var="botType" items="${botTypes}">
 				<option value="${botType}">${botType}</option>
 			</c:forEach>
@@ -41,11 +41,20 @@
 			
 			var FACE_RADIUS = 45;
 			
+			var ALICE_FACE_COLOR = "pink";
+			var DANWOO_FACE_COLOR = "yellow";
+			var ELIZA_FACE_COLOR = "gray";
+			
+			var FACE_COLORS = {};
+			FACE_COLORS['ALICE'] = ALICE_FACE_COLOR;
+			FACE_COLORS['DANWOO'] = DANWOO_FACE_COLOR;
+			FACE_COLORS['ELIZA'] = ELIZA_FACE_COLOR;
+			
 			function degree2Radian(degree) {
 				return degree / 180 * Math.PI;
 			}
 			
-			function drawFace() {
+			function drawFace(faceColor) {
 				var x = canvas.width / 2;
 				var y = canvas.height / 2;
 				var radius = FACE_RADIUS;
@@ -53,7 +62,7 @@
 				context.beginPath();
 				context.arc(x, y, radius, 0, degree2Radian(360));
 				context.stroke();
-				context.fillStyle = "yellow";
+				context.fillStyle = faceColor;
 				context.fill();
 			}
 			
@@ -87,7 +96,10 @@
 			}
 			
 			function drawBot() {
-				drawFace();
+				var bot = $('#to').val();
+				var faceColor = FACE_COLORS[bot];
+				
+				drawFace(faceColor);
 				drawMouth();
 				drawEyes();
 			}

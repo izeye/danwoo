@@ -5,7 +5,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 		<meta name="description" content="Danwoo">
 		<meta name="author" content="izeye">
 		
@@ -35,7 +35,7 @@
 			<li><a href="<c:url value="/" />">Home</a></li>
 			<li><a href="<c:url value="/messages" />">Messages</a></li>
 		</ul>
-		<div class="mainBody">
+		<div class="container">
 			<sitemesh:write property="body" />
 		</div>
 		

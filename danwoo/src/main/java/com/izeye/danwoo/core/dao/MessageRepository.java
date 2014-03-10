@@ -6,6 +6,6 @@ import com.izeye.danwoo.core.domain.Message;
 
 public interface MessageRepository extends CrudRepository<Message, Long> {
 
-	Iterable<Message> findAllByOrderByTimestampDesc();
+	Iterable<Message> findAllByOrderByIdDesc();
 
 }

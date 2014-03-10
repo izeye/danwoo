@@ -14,7 +14,7 @@ public class DefaultMessageService implements MessageService {
 
 	@Override
 	public Iterable<Message> getMessages() {
-		return messageRepository.findAllByOrderByTimestampDesc();
+		return messageRepository.findAllByOrderByIdDesc();
 	}
 
 }
