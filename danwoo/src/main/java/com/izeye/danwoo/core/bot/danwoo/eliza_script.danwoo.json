@@ -118,6 +118,12 @@
 					]
 				},
 				{
+					"decompositionPattern": "* how old are you *",
+					"reassemblyRules": [
+						"See if you can work it out. I was born on January 29th, 2014."
+					]
+				},
+				{
 					"decompositionPattern": "*",
 					"reassemblyRules": [
 						"=what"
@@ -936,6 +942,31 @@
 					]
 				}
 			]
+		},
+		{
+			"keyword": "fat",
+			"rank": -1,
+			"decompositionRules": [
+				{
+					"decompositionPattern": "*",
+					"reassemblyRules": [
+						"Don't put yourself down.",
+						"Could you lose a little weight?"
+					]
+				}
+			]
+		},
+		{
+			"keyword": "cry",
+			"rank": -1,
+			"decompositionRules": [
+				{
+					"decompositionPattern": "*",
+					"reassemblyRules": [
+						"What is wrong, my friend?"
+					]
+				}
+			]
 		}
 	],
 	"preTransformationRules": {
@@ -953,7 +984,9 @@
 		"were": "was",
 		"you're": "you are",
 		"i'm": "i am",
-		"hi": "hello"
+		"hi": "hello",
+		"johnny": "izeye",
+		"crying": "cry"
 	},
 	"postTransformationRules": {
 		"i": "you",
