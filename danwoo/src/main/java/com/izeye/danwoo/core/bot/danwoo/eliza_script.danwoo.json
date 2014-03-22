@@ -328,7 +328,7 @@
 				{
 					"decompositionPattern": "*",
 					"reassemblyRules": [
-						"How do you do. Please state your problem."
+						"How do you do. Any news?"
 					]
 				}
 			]
@@ -568,6 +568,12 @@
 			"rank": 0,
 			"decompositionRules": [
 				{
+					"decompositionPattern": "* do you have a girlfriend *",
+					"reassemblyRules": [
+						"Sure. Her name is ALICE. You can find her over there."
+					]
+				},
+				{
 					"decompositionPattern": "* you remind me of *",
 					"reassemblyRules": [
 						"=alike"
@@ -609,6 +615,12 @@
 			"keyword": "can",
 			"rank": 0,
 			"decompositionRules": [
+				{
+					"decompositionPattern": "* can you speak ${language} *",
+					"reassemblyRules": [
+						"Unfortunately, I can speak English only. But I'll learn ${2} for you."
+					]
+				},
 				{
 					"decompositionPattern": "* can you *",
 					"reassemblyRules": [
@@ -967,6 +979,18 @@
 					]
 				}
 			]
+		},
+		{
+			"keyword": "hmm",
+			"rank": 0,
+			"decompositionRules": [
+				{
+					"decompositionPattern": "*",
+					"reassemblyRules": [
+						"Any problem?"
+					]
+				}
+			]
 		}
 	],
 	"preTransformationRules": {
@@ -985,8 +1009,11 @@
 		"you're": "you are",
 		"i'm": "i am",
 		"hi": "hello",
+		"holla": "hello",
 		"johnny": "izeye",
-		"crying": "cry"
+		"lim": "izeye",
+		"crying": "cry",
+		"hmmmm": "hmm"
 	},
 	"postTransformationRules": {
 		"i": "you",
@@ -995,7 +1022,9 @@
 		"are": "am",
 		"me": "you",
 		"myself": "yourself",
-		"yourself": "myself"
+		"yourself": "myself",
+		"your": "my",
+		"my": "your"
 	},
 	"synonyms": {
 		"belief": ["feel", "think", "believe", "wish"],
@@ -1005,6 +1034,7 @@
 		"happy": ["happy", "elated", "glad", "better"],
 		"cannot": ["can't", "cannot"],
 		"everyone": ["everyone", "everybody", "nobody", "noone"],
-		"be": ["am", "is", "are", "was"]
+		"be": ["am", "is", "are", "was"],
+		"language": ["spanish"]
 	}
 }

@@ -68,7 +68,15 @@ public class DanwooEngine {
 		// Later, it needs to be handled properly.
 		input = emoticonService.removeEmoticons(input);
 
+		// FIXME:
+		// Handle exceptions temporarily.
+		input = handleExceptions(input);
+
 		return elizaEngine.respond(input);
+	}
+
+	private String handleExceptions(String input) {
+		return input.replaceAll("[mM]r.", "Mr");
 	}
 
 }

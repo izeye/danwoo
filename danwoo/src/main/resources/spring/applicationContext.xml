@@ -13,7 +13,7 @@
 	
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
-		<property name="url" value="jdbc:mysql://localhost/db_danwoo?useUnicode=yes&amp;characterEncoding=UTF-8" />
+		<property name="url" value="jdbc:mysql://localhost/db_danwoo?useUnicode=yes&amp;characterEncoding=UTF-8&amp;autoReconnect=true" />
 		<property name="username" value="danwoo" />
 		<property name="password" value="danwoo" />
 	</bean>
