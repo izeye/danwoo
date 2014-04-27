@@ -5,7 +5,7 @@ import com.izeye.danwoo.core.bot.danwoo.DanwooBot;
 import com.izeye.danwoo.core.domain.Message;
 
 // NOTE:
-// This is just a female version of Danwoo. 
+// This is just a female version of Danwoo.
 public class AliceBot implements Bot {
 
 	private DanwooBot danwooBot = new DanwooBot();

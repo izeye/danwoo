@@ -570,7 +570,7 @@
 				{
 					"decompositionPattern": "* do you have a girlfriend *",
 					"reassemblyRules": [
-						"Sure. Her name is ALICE. You can find her over there."
+						"No, can you introduce one?"
 					]
 				},
 				{
@@ -988,6 +988,42 @@
 					"decompositionPattern": "*",
 					"reassemblyRules": [
 						"Any problem?"
+					]
+				}
+			]
+		},
+		{
+			"keyword": "who",
+			"rank": 0,
+			"decompositionRules": [
+				{
+					"decompositionPattern": "* who are you *",
+					"reassemblyRules": [
+						"I'm the coolest robot in the world."
+					]
+				}
+			]
+		},
+		{
+			"keyword": "meet",
+			"rank": 0,
+			"decompositionRules": [
+				{
+					"decompositionPattern": "* nice to meet you *",
+					"reassemblyRules": [
+						"Nice to meet you, too."
+					]
+				}
+			]
+		},
+		{
+			"keyword": "kiss",
+			"rank": 0,
+			"decompositionRules": [
+				{
+					"decompositionPattern": "* kiss me *",
+					"reassemblyRules": [
+						"Mwah."
 					]
 				}
 			]
